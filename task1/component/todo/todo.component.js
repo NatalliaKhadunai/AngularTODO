@@ -1,3 +1,8 @@
-/**
- * Created by khadunai on 11/24/2016.
- */
+(function () {
+    'use strict';
+    angular.module('mainComponentModule')
+        .component('todo', {
+            templateUrl: 'component/todo/todo.html',
+            controller: 'todoCtrl'
+        });
+})();

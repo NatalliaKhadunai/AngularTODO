@@ -1,3 +1,12 @@
-/**
- * Created by khadunai on 11/24/2016.
- */
+(function() {
+    'use strict';
+
+    angular
+        .module('mainComponentModule')
+        .factory('itemsFactory', function () {
+            return {
+                items: []
+            }
+        });
+
+})();
