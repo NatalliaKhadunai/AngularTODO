@@ -1,0 +1,5 @@
+<div id="pagination" class="row">
+    <button ng-disabled="$ctrl.parent.firstPage()" ng-click="$ctrl.parent.pageBack()">Prev</button>
+    <span>{{$ctrl.parent.currentPage+1}} from {{$ctrl.parent.numberOfPages()}}</span>
+    <button ng-disabled="$ctrl.parent.lastPage()" ng-click="$ctrl.parent.pageForward()">Next</button>
+</div>
