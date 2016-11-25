@@ -3,13 +3,13 @@
 
     angular
         .module('mainComponentModule')
-        .controller('todoCtrl', function (itemsFactory, pageCountFactory) {
+        .controller('todoCtrl', function (todoService, paginationService) {
             let self = this;
 
-            self.items = itemsFactory.items;
+            self.items = todoService.getItems();
             self.item = {};
             self.search;
-            self.itemsPerPage = pageCountFactory.getItemsPerPage();
+            self.itemsPerPage = paginationService.getItemsPerPage();
 
             self.addItem = function () {
                 self.items.push({
@@ -44,8 +44,8 @@
             }
 
             self.startingItem = function() {
-                return pageCountFactory.getCurrentPage() *
-                    pageCountFactory.getItemsPerPage();
+                return paginationService.getCurrentPage() *
+                    paginationService.getItemsPerPage();
             }
         });
 })();

@@ -3,26 +3,26 @@
 
     angular
         .module('mainComponentModule')
-        .controller('paginationCtrl', function (itemsFactory, pageCountFactory) {
+        .controller('paginationCtrl', function (todoService, paginationService) {
             let self = this;
 
-            self.items = itemsFactory.items;
+            self.items = todoService.getItems();
 
             self.firstPage = function() {
-                return pageCountFactory.getCurrentPage() == 0;
+                return paginationService.getCurrentPage() == 0;
             }
             self.lastPage = function() {
-                var lastPageNum = Math.ceil(self.items.length / pageCountFactory.getItemsPerPage() - 1);
-                return pageCountFactory.getCurrentPage() == lastPageNum;
+                var lastPageNum = Math.ceil(self.items.length / paginationService.getItemsPerPage() - 1);
+                return paginationService.getCurrentPage() == lastPageNum;
             }
             self.numberOfPages = function(){
-                return Math.ceil(self.items.length / pageCountFactory.getItemsPerPage());
+                return Math.ceil(self.items.length / paginationService.getItemsPerPage());
             }
             self.pageBack = function() {
-                pageCountFactory.decrementCurrentPage();
+                paginationService.decrementCurrentPage();
             }
             self.pageForward = function() {
-                pageCountFactory.incrementCurrentPage();
+                paginationService.incrementCurrentPage();
             }
         });
 })();
