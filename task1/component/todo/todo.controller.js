@@ -2,11 +2,10 @@
     'use strict';
 
     angular
-        .module('mainComponentModule')
+        .module('app')
         .controller('todoCtrl', function (todoService, paginationService) {
             let self = this;
 
-            self.items = todoService.getItems();
             self.item = {};
             self.search;
             self.itemsPerPage = paginationService.getItemsPerPage();

@@ -2,11 +2,9 @@
     'use strict';
 
     angular
-        .module('mainComponentModule')
+        .module('app')
         .controller('paginationCtrl', function (todoService, paginationService) {
             let self = this;
-
-            self.items = todoService.getItems();
 
             self.firstPage = function() {
                 return paginationService.getCurrentPage() == 0;

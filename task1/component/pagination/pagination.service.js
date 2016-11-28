@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('mainComponentModule')
+        .module('app')
         .service('paginationService', function () {
             let self = this;
 

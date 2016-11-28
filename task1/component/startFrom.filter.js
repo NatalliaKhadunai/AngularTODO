@@ -1,6 +1,6 @@
 (function () {
     'use strict';
-    angular.module('mainComponentModule')
+    angular.module('app')
         .filter('startFrom', function(){
             return function(items, start){
                 start = +start;

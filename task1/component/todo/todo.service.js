@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('mainComponentModule')
+        .module('app')
         .service('todoService', function () {
             let self = this;
 

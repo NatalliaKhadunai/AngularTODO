@@ -1,8 +1,11 @@
 (function () {
     'use strict';
-    angular.module('mainComponentModule')
+    angular.module('app')
         .component('todo', {
             templateUrl: 'component/todo/todo.html',
-            controller: 'todoCtrl'
+            controller: 'todoCtrl',
+            bindings: {
+                items: '='
+            }
         });
 })();

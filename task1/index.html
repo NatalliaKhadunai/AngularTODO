@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="app">
 <head>
     <meta charset="UTF-8">
     <title>TODO</title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.2/angular-ui-router.js"></script>
     <script src="app.js" type="text/javascript"></script>
-    <script src="component/mainComponent.module.js"></script>
-    <script src="component/mainComponent.component.js"></script>
     <script src="component/startFrom.filter.js"></script>
     <script src="component/pagination/pagination.component.js"></script>
     <script src="component/pagination/pagination.controller.js"></script>
@@ -18,13 +17,16 @@
         .red {
             background-color: pink;
         }
+        .active {
+            color: pink;
+        }
     </style>
 </head>
 <body>
-<main-component>
-    <todo></todo>
-    <hr>
-    <pagination></pagination>
-</main-component>
+<ul>
+    <li><a ui-sref="home" ui-sref-active="active">Home</a></li>
+    <li><a ui-sref="todo" ui-sref-active="active">TODO list</a></li>
+</ul>
+<ui-view></ui-view>
 </body>
 </html>
