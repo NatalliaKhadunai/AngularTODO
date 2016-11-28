@@ -1,0 +1,23 @@
+{
+  "name": "app",
+  "homepage": "https://github.com/NatalliaKhadunai/AngularTODO",
+  "authors": [
+    "NatalliaKhadunai <hodunay2009@yandex.ru>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.9",
+    "angular-ui-router": "^0.3.2",
+    "angular-mocks": "^1.5.9"
+  }
+}
